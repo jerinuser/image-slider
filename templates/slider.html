@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider" id="slider">
+            {% for image in images %}
+            <img src="{{ url_for('static', filename='images/' ~ image) }}" alt="Image {{ loop.index }}" class="slide">
+            {% endfor %}
+        </div>
+        <button class="nav-button prev" onclick="prevSlide()">&#10094;</button>
+        <button class="nav-button next" onclick="nextSlide()">&#10095;</button>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>

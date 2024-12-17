@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+.slider-container {
+    position: relative;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: flex; /* Fixes the image to the screen */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Makes the image take the full width of the viewport */
+    height: 100vh; /* Makes the image take the full height of the viewport */
+    object-fit: cover; /* Ensures the image covers the full space without distortion */
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}

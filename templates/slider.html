@@ -11,7 +11,7 @@
     <div class="slider-container">
         <div class="slider" id="slider">
             {% for image in images %}
-            <img src="{{ url_for('static', filename='images/' ~ image) }}" alt="Image {{ loop.index }}" class="slide">
+            <img src="{{ url_for('static', filename='resized_images/' ~ image) }}" alt="Image {{ loop.index }}" class="slide">
             {% endfor %}
         </div>
         <button class="nav-button prev" onclick="prevSlide()">&#10094;</button>

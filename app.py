@@ -4,7 +4,7 @@ import os
 app = Flask(__name__)
 
 # Folder containing images
-IMAGE_FOLDER = "static/images"
+IMAGE_FOLDER = "static/resized_images"
 
 @app.route("/")
 def home():
